@@ -7,6 +7,7 @@ const App = () => {
     <div>
       <h1>User Authentication</h1>
       <AuthForm />
+      <UserProfile />
     </div>
   );
 };
