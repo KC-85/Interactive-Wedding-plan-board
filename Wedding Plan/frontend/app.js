@@ -1,5 +1,6 @@
 import React from 'react';
 import AuthForm from './components/AuthForm';  // Import AuthForm component
+import UserProfile from './components/UserProfile';  // Import UserProfile component
 
 const App = () => {
   return (
