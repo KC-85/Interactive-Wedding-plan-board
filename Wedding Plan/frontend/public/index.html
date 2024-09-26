@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Interactive Wedding Planning Board</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Wedding Plan/frontend/src/assets/css/style.css" />
+
+  <!-- GSAP & Three.js will be integrated via React/JS scripts -->
+</head>
+<body>
+  <!-- Header with Navigation -->
+  <header class="header">
+    <nav>
+      <div class="logo">
+        <h1>Wedding Planner</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#planning-board">Planning Board</a></li>
+        <li><a href="#3d-view">3D View</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Your Dream Wedding, Perfectly Planned</h2>
+      <p>Organize your big day with interactive tools and real-time collaboration.</p>
+      <a href="#planning-board" class="btn-primary">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Wedding Planning Board Section -->
+  <section id="planning-board" class="planning-board">
+    <h2>Interactive Wedding Planning Board</h2>
+    <div class="board-items">
+      <div class="board-item">
+        <h3>Guest List</h3>
+        <p>Manage your guest list with ease. Add, remove, and track RSVPs.</p>
+      </div>
+      <div class="board-item">
+        <h3>Venue Selection</h3>
+        <p>Choose from the best venues and track availability.</p>
+      </div>
+      <div class="board-item">
+        <h3>Task Tracker</h3>
+        <p>Stay on top of your wedding to-do list with real-time updates.</p>
+      </div>
+      <div class="board-item">
+        <h3>Seating Chart</h3>
+        <p>Plan your seating arrangement and optimize guest experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3D Visualization Section (For Three.js Integration) -->
+  <section id="3d-view" class="three-d-view">
+    <h2>Visualize Your Venue in 3D</h2>
+    <div id="three-js-canvas-container">
+      <!-- Three.js canvas will be injected here via React -->
+    </div>
+    <p>Experience a 3D walkthrough of your selected wedding venue.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <h2>Get in Touch</h2>
+    <p>Have questions? Contact our wedding planning experts today!</p>
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn-primary">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 Wedding Planner | Designed with love for your special day.</p>
+    </div>
+  </footer>
+
+  <!-- Optional JS files for React, GSAP, Three.js -->
+  <script src="index.js"></script>
+</body>
+</html>
