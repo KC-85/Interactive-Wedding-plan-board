@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { registerUser, loginUser } from '../utils/api';  // Import Axios functions
+import { sanitizeHTML } from '../utils/sanitize';  // Import sanitize function
 
 const AuthForm = () => {
   const [formData, setFormData] = useState({
@@ -16,13 +17,21 @@ const AuthForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
+      // Sanitize inputs before sending them
+      const safeFormData = {
+        username: sanitizeHTML(formData.username),   // Sanitize username
+        email: sanitizeHTML(formData.email),         // Sanitize email
+        password: sanitizeHTML(formData.password),   // Sanitize password
+      };
+
       if (isLogin) {
-        const { token } = await loginUser({ email: formData.email, password: formData.password });
+        const { token } = await loginUser({ email: safeFormData.email, password: safeFormData.password });
         localStorage.setItem('token', token);  // Save the JWT token
         console.log('Login successful. Token:', token);
       } else {
-        const userData = await registerUser(formData);
+        const userData = await registerUser(safeFormData);
         console.log('User registered successfully:', userData);
       }
     } catch (err) {
