@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { sanitizeHTML } from '../utils/sanitize';
 
 const Board = () => {
-  const [content, setContent] = useState('<script>alert("XSS")</script><b>All Tasks</b>');
+  const [content, setContent] = useState('<script>alert("XSS")</script><b>tasktracker.html, guestlist.html, seatingchart.html, venueselection.html</b>');
 
   // Sanitize content before rendering
   const safeContent = sanitizeHTML(content);
