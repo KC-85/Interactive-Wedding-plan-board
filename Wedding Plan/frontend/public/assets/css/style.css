@@ -310,15 +310,16 @@
 
 /* Horizontal Scroll Container */
 .scroll-container {
-  display: flex;                /* Enable flex layout */
-  overflow-x: auto;             /* Horizontal scroll */
-  scroll-behavior: smooth;      /* Smooth scrolling */
-  white-space: nowrap;          /* Prevent wrapping */
-  padding: 20px 0;
+  display: flex;                /* Use flex layout to align items horizontally */
+  flex-wrap: nowrap;            /* Prevent items from wrapping to a new line */
+  overflow-x: auto;             /* Enable horizontal scrolling */
+  scroll-behavior: smooth;      /* Smooth scrolling effect */
+  white-space: nowrap;          /* Keep items in a single line */
+  padding: 20px 0;              /* Adjust top and bottom padding */
 }
 
 .scroll-container::-webkit-scrollbar {
-  height: 8px;                  /* Scrollbar height */
+  height: 8px;                  /* Adjust the scrollbar height */
 }
 
 .scroll-container::-webkit-scrollbar-thumb {
@@ -327,28 +328,29 @@
 }
 
 .scroll-container::-webkit-scrollbar-thumb:hover {
-  background: #555;             /* Scrollbar hover effect */
+  background: #555;             /* Hover effect for scrollbar */
 }
 
 /* Styling for Each Venue Item */
 .venue-item {
-  display: inline-block;        /* Make items inline */
-  width: 200px;                 /* Width of each item */
+  display: inline-block;        /* Make each item inline-block */
+  width: 200px;                 /* Set a fixed width for consistency */
   margin: 0 15px;               /* Space between items */
   cursor: pointer;
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
+  white-space: normal;          /* Allow wrapping inside each item */
 }
 
 .venue-item img {
-  width: 100%;                  /* Full width image */
-  height: 150px;                /* Image height */
-  object-fit: cover;            /* Maintain aspect ratio */
+  width: 100%;                  /* Ensure images fit within the item */
+  height: 150px;                /* Set consistent image height */
+  object-fit: cover;            /* Crop to fit within the dimensions */
 }
 
 .venue-item h3 {
-  background: #0056d2;          /* Background color */
+  background: #0056d2;          /* Background color for item titles */
   color: white;
   padding: 10px 0;
   margin: 0;
