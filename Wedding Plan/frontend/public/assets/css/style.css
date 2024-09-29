@@ -295,3 +295,66 @@
     }
   }
   
+  /* Scrollable Wedding Venue Themes Section */
+.venue-themes {
+  margin-top: 50px;
+  padding: 20px 0;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.venue-themes h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Horizontal Scroll Container */
+.scroll-container {
+  display: flex;                /* Enable flex layout */
+  overflow-x: auto;             /* Horizontal scroll */
+  scroll-behavior: smooth;      /* Smooth scrolling */
+  white-space: nowrap;          /* Prevent wrapping */
+  padding: 20px 0;
+}
+
+.scroll-container::-webkit-scrollbar {
+  height: 8px;                  /* Scrollbar height */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #888;             /* Scrollbar color */
+  border-radius: 4px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #555;             /* Scrollbar hover effect */
+}
+
+/* Styling for Each Venue Item */
+.venue-item {
+  display: inline-block;        /* Make items inline */
+  width: 200px;                 /* Width of each item */
+  margin: 0 15px;               /* Space between items */
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.venue-item img {
+  width: 100%;                  /* Full width image */
+  height: 150px;                /* Image height */
+  object-fit: cover;            /* Maintain aspect ratio */
+}
+
+.venue-item h3 {
+  background: #0056d2;          /* Background color */
+  color: white;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.venue-item:hover {
+  transform: translateY(-5px);  /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
