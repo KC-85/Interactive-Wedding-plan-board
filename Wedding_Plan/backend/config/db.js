@@ -1,3 +1,4 @@
+require('colors');
 const mongoose = require('mongoose');
 
 // Database connection function
